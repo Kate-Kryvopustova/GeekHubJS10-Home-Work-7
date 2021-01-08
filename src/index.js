@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoForm from './ComponentList/ComponentListJS/TodoForm';
-import TodoList from './ComponentList/ComponentListJS/TodoList';
+import TodoForm from './components/TodoForm/TodoForm'
+import TodoList from './components/TodoList/TodoList';
 import todoItems from './mocks/initialTodoList';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,15 +10,13 @@ class TodoApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = { todoItems: this.props.initItems };
-
-    this.addItem = this.addItem.bind(this);
   }
 
-  addItem(itemName) {
+  addItem = (itemName) => {
     const todoItem = {
       id: Date.now(),
       value: itemName,
-      done: false
+      isDone: false
     }
 
     this.setState(state => {
@@ -35,16 +33,28 @@ class TodoApp extends React.Component {
   }
 
   toggleTodoItem = (id) => {
-    console.log(id)
+    this.setState(state => {
+      const todoItems = state.todoItems.map(item => {
+        if (item.id === id) {
+          return {
+            ...item,
+            isDone: !item.isDone,
+          };
+        }
+   
+        return item;
+      })
+
+      return {todoItems}
+    })
   }
 
   render() {
     return (
       <div id="main">
-        <h1>Todo list</h1>
+        <h1 className='title'>Todo list</h1>
         <TodoForm addItem={this.addItem} name={''} />
         <TodoList items={this.state.todoItems} onDelete={this.handleDelete} onToggle={this.toggleTodoItem} />
-
       </div>
     );
   }

@@ -8,9 +8,5 @@ li:hover {
 }
 
 .undone {
-  color: #61DAFB;
-}
-
-.icon {
-  margin: 6px 10px 6px 0;
+  color: rgb(0, 172, 219);
 }
