@@ -9,14 +9,18 @@ class TodoForm extends React.Component {
     this.state = {name: this.props.name};
 
     this.itemName = React.createRef();
-    this.form = React.createRef();
   }
 
   componentDidMount() {
     this.itemName.current.focus();
   }
 
+  componentDidUpdate() {
+    this.itemName.current.focus();
+  }
+
   onSubmit = (event) => {
+    if(!this.state.name.trim()) return 
     this.props.addItem(this.state.name);
     this.setState({name: ''})
     event.preventDefault();
@@ -30,7 +34,7 @@ class TodoForm extends React.Component {
 
   render () {
     return (
-      <form ref={this.form} onSubmit={this.onSubmit} className="form-inline">
+      <form onSubmit={this.onSubmit} className="form-inline">
         <input type="text" ref={this.itemName} value={ this.state.name } onChange={this.onChange} className="form-control" placeholder="add a new task..."/>
         <Button variant="outline-secondary" type="submit" >Add</Button> 
       </form>
