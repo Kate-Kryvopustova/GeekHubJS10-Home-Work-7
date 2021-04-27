@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import './TodoForm.css'
+import './Form.css';
 
-class TodoForm extends React.Component {
+class Form extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {name: this.props.name};
+    this.state = { name: this.props.name };
 
     this.itemName = React.createRef();
   }
@@ -21,26 +21,34 @@ class TodoForm extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    if(!this.state.name.trim()) return;
+    if (!this.state.name.trim()) {
+      return;
+    }
     this.props.addItem(this.state.name);
-    this.setState({name: ''})
-
+    this.setState({ name: '' });
   }
 
   onChange = (event) => {
     this.setState(
-      {name: event.target.value}
-    )
+      { name: event.target.value },
+    );
   }
 
-  render () {
+  render() {
     return (
-      <form onSubmit={this.onSubmit} className="form-inline">
-        <input type="text" ref={this.itemName} value={ this.state.name } onChange={this.onChange} className="form-control" placeholder="add a new task..."/>
-        <Button variant="outline-secondary" type="submit" >Add</Button> 
+      <form onSubmit={ this.onSubmit } className="form-inline">
+        <input
+          type="text"
+          ref={ this.itemName }
+          value={ this.state.name }
+          onChange={ this.onChange }
+          className="form-control"
+          placeholder="add a new task..."
+        />
+        <Button variant="outline-secondary" type="submit">Add</Button>
       </form>
-    );   
+    );
   }
 }
 
-export default TodoForm
+export default Form;

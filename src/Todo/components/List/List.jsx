@@ -1,31 +1,32 @@
 import React from 'react';
-import TodoListItem from '../TodoListItem/TodoListItem';
-import './TodoList.css';
+import './List.css';
+import ListItem from '../ListItem/ListItem';
 
-class TodoList extends React.Component {
+class List extends React.Component {
+  renderItem(item) {
+    return (
+      <ListItem
+        key={ item.id }
+        item={ item }
+        onToggle={ this.props.onToggle }
+        onDelete={ this.props.onDelete }
+      />
+    );
+  }
+
   render() {
-    const activeList = [];
-    const completeList = [];
-
-    this.props.items.forEach((item) => {
-      if (item.isDone) {
-        return completeList.push(<TodoListItem key={item.id} item={item} onDelete={this.props.onDelete} onToggle={this.props.onToggle} />);
-      }
-      return activeList.push(<TodoListItem key={item.id} item={item} onDelete={this.props.onDelete} onToggle={this.props.onToggle} />);
-    });
-
     return (
       <div>
         <ul className="list-group">
-          {activeList}
+          {this.props.items.map((item) => !item.isDone && this.renderItem(item))}
         </ul>
         <hr />
         <ul className="list-group">
-          {completeList}
+          {this.props.items.map((item) => item.isDone && this.renderItem(item))}
         </ul>
       </div>
     );
   }
 }
 
-export default TodoList;
+export default List;

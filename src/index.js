@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoApp from './components/TodoApp/TodoApp';
-import todoItems from './mocks/initialTodoList';
+import App from './app/App';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoApp initItems={todoItems} />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );

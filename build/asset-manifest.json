@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/GeekHubJS10-Home-Work-7/static/css/main.300c42b5.chunk.css",
+    "main.js": "/GeekHubJS10-Home-Work-7/static/js/main.dd9347ef.chunk.js",
+    "main.js.map": "/GeekHubJS10-Home-Work-7/static/js/main.dd9347ef.chunk.js.map",
+    "runtime-main.js": "/GeekHubJS10-Home-Work-7/static/js/runtime-main.8fe815a8.js",
+    "runtime-main.js.map": "/GeekHubJS10-Home-Work-7/static/js/runtime-main.8fe815a8.js.map",
+    "static/css/2.ae9f1eb3.chunk.css": "/GeekHubJS10-Home-Work-7/static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.834da85e.chunk.js": "/GeekHubJS10-Home-Work-7/static/js/2.834da85e.chunk.js",
+    "static/js/2.834da85e.chunk.js.map": "/GeekHubJS10-Home-Work-7/static/js/2.834da85e.chunk.js.map",
+    "index.html": "/GeekHubJS10-Home-Work-7/index.html",
+    "static/css/2.ae9f1eb3.chunk.css.map": "/GeekHubJS10-Home-Work-7/static/css/2.ae9f1eb3.chunk.css.map",
+    "static/css/main.300c42b5.chunk.css.map": "/GeekHubJS10-Home-Work-7/static/css/main.300c42b5.chunk.css.map",
+    "static/js/2.834da85e.chunk.js.LICENSE.txt": "/GeekHubJS10-Home-Work-7/static/js/2.834da85e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8fe815a8.js",
+    "static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.834da85e.chunk.js",
+    "static/css/main.300c42b5.chunk.css",
+    "static/js/main.dd9347ef.chunk.js"
+  ]
+}
