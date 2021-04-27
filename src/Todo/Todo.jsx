@@ -48,9 +48,9 @@ class Todo extends React.Component {
 
   render() {
     return (
-      <div id="main">
-        <h1 className="title">Todo list</h1>
-        <Form addItem={ this.addItem } name="" />
+      <div id='main'>
+        <h1 className='title'>Todo list</h1>
+        <Form addItem={ this.addItem } name='' />
         <List
           items={ this.state.todoItems }
           onDelete={ this.handleDelete }

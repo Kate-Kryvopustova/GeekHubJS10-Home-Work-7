@@ -3,7 +3,7 @@ import { Check2, Circle } from 'react-bootstrap-icons';
 import './ListItem.css';
 
 const ListItem = ({ item, onToggle, onDelete }) => (
-  <li className="list-group-item" onClick={ () => onToggle(item.id) }>
+  <li className='list-group-item' onClick={ () => onToggle(item.id) }>
 
     <div className={ item.isDone ? 'done' : 'undone' }>
 
@@ -14,8 +14,8 @@ const ListItem = ({ item, onToggle, onDelete }) => (
       <span style={ { marginLeft: 15 } }>{ item.value }</span>
 
       <button
-        type="button"
-        className="close"
+        type='button'
+        className='close'
         onClick={ (event) => {
           event.stopPropagation();
           onDelete(item.id);

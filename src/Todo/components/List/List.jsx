@@ -17,12 +17,12 @@ class List extends React.Component {
   render() {
     return (
       <div>
-        <ul className="list-group">
-          {this.props.items.map((item) => !item.isDone && this.renderItem(item))}
+        <ul className='list-group'>
+          { this.props.items.map((item) => !item.isDone && this.renderItem(item)) }
         </ul>
         <hr />
-        <ul className="list-group">
-          {this.props.items.map((item) => item.isDone && this.renderItem(item))}
+        <ul className='list-group'>
+          { this.props.items.map((item) => item.isDone && this.renderItem(item)) }
         </ul>
       </div>
     );

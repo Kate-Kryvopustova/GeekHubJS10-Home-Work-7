@@ -36,16 +36,16 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form onSubmit={ this.onSubmit } className="form-inline">
+      <form onSubmit={ this.onSubmit } className='form-inline'>
         <input
-          type="text"
+          type='text'
           ref={ this.itemName }
           value={ this.state.name }
           onChange={ this.onChange }
-          className="form-control"
-          placeholder="add a new task..."
+          className='form-control'
+          placeholder='add a new task...'
         />
-        <Button variant="outline-secondary" type="submit">Add</Button>
+        <Button variant='outline-secondary' type='submit'>Add</Button>
       </form>
     );
   }
